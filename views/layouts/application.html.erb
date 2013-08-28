@@ -29,3 +29,13 @@
       <%= link_to('This is a link to ESPNFC', 'http://espnfc.com') %>
   </footer>
 </html>
+<%= @request.query.inspect %>
+    <form method='post' action="<%= @request.path %>">
+        First name: <input type="text" name="first_name" placeholder='first name'/><br />
+        <input type="submit" value="Submit" />
+    </form>
+ <% if @request.query['first_name'] && !@request.query['first_name'].empty? %>
+    Hello there <%= @request.query['first_name'] %>
+  <% else %>
+    Enter thy name
+  <% end %>
