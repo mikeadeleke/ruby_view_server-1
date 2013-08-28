@@ -1,4 +1,12 @@
+  <%
+    def link_to(name, url)
+        return "<a href='#{url}'>#{name}</a>"
+     end
+    %>
 <html>
+  <header>
+      <%= link_to('This is a link to google', 'http://google.com') %>
+  </header>
   <body>
     <h1>You're using a layout</h1>
     <p>
@@ -17,4 +25,7 @@
       <p>Put things in the footer</p>
     </div>
   </body>
+  <footer>
+      <%= link_to('This is a link to ESPNFC', 'http://espnfc.com') %>
+  </footer>
 </html>
